@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const OrderCompletionSuccess = ({ orderId, onReturn }) => {
     const completedTasks = [
@@ -17,7 +15,6 @@ const OrderCompletionSuccess = ({ orderId, onReturn }) => {
             transition={{ duration: 0.3 }}
             className="p-6 text-center"
         >
-            <ToastContainer />
             <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}

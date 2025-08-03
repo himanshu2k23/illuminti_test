@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const OrderCompletionProblem = ({ orderId, onSubmit }) => {
     const [selectedProblem, setSelectedProblem] = useState(null);
@@ -29,14 +27,13 @@ const OrderCompletionProblem = ({ orderId, onSubmit }) => {
     };
 
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             className="p-6 text-center relative"
         >
-                        <ToastContainer />
-            <motion.div 
+            <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
@@ -59,8 +56,8 @@ const OrderCompletionProblem = ({ orderId, onSubmit }) => {
                             text-center 
                             transition-all
                             border 
-                            ${selectedProblem === problem 
-                                ? 'bg-blue-50 border-blue-500 text-blue-700' 
+                            ${selectedProblem === problem
+                                ? 'bg-blue-50 border-blue-500 text-blue-700'
                                 : 'bg-gray-100 border-gray-300 hover:bg-gray-200'}`}
                     >
                         {problem}
